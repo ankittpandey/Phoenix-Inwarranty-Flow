@@ -22,24 +22,24 @@ jobs:
         with:
           node-version: '22'
 
-      - name: install newman and html-extra Globally
+      - name: install newman and html-extra globally
         run: |
              npm install -g newman
              npm install -g newman-reporter-htmlextra
              
 
-      - name: Run Postman Collection with newman
+      - name: Run Postman Collection with Newman
         run: |
              newman run 'In-Warranty Flow.postman_collection.json' \
              -e QA.postman_environment.json \
              -r cli,htmlextra \
              --reporter-htmlextra-export ./newman/index.html
 
-      - name: Newman Report
+      - name: Newman Test Report
         if: always() # archieve Executed irrespective of the Result
         uses: actions/upload-artifact@v4.6.2
         with:
-          name: Newman Report
+          name: Newman Test Report
           path: newman/*.html
 
       - name: Creating github page branch
