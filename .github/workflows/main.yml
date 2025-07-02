@@ -59,6 +59,7 @@ jobs:
           password: ${{ secrets.EMAIL_PASSWORD }}
           subject: Phoenix Inwarranty Flow Test Execution Notification
           to: ankitpandey397@gmail.com
+          from: ${{ secrets.EMAIL_USERNAME }}
           body: |
                 Hi,
                 Phoenix Inwarranty flow Test has been executed. The Report has been published and the URL
