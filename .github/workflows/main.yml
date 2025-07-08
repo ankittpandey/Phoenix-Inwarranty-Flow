@@ -30,7 +30,7 @@ jobs:
 
       - name: Run Postman Collection with Newman
         run: |
-             newman run 'In-Warranty Flow.postman_collection.json' \
+             newman run 'In-Warranty Flow Limited.postman_collection.json' \
              -e QA.postman_environment.json \
              -d testdata.csv \
              -r cli,htmlextra \
