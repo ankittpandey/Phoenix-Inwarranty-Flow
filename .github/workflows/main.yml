@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
   schedule:
    # - cron: 30 02 * * * # 8 am IST
-    - cron: 00 14 * * * # 730 pm IST
+    - cron: 00 14 * * 6 # 730 pm IST Sat
    # - cron: 00 06 * * 1-5 # 1130 am Mon to Fri
 
 jobs:
